@@ -1,0 +1,1 @@
+Listens for on click on the different icons.  After clicking on one of them it will make the icon active and show related information to the right of it.  When viewing related information, a back button appears on the bottom to go back to the orginal text.

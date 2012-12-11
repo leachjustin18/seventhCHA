@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+        <link rel="stylesheet" type="text/css" href="media/main.css"/>
+        <script type="text/javascript" src="media/jquery-1.8.min.js"></script>
+        <script type="text/javascript" charset="utf-8">
+        $(function(){
+          var $sel = {
+            stages : $('.diffStages')
+            ,replaceText : $('.replaceText')
+            ,returnText : $('.return')
+            ,hiddenText : $('.hidden')
+          }
+
+            $sel.stages.click(function() {
+              $sel.replaceText.hide();
+              $sel.hiddenText.hide();
+              $('#' + $(this).attr('number')).show();
+
+              $sel.stages.each(function(){
+                this.src= this.src.replace("-over", "_off");
+              });
+                this.src= this.src.replace("_off", "-over");               
+            });
+
+            $sel.returnText.click(function(){
+              $sel.hiddenText.hide();
+              $sel.replaceText.show();
+
+               $sel.stages.each(function(){
+                this.src= this.src.replace("-over", "_off");
+              });
+            });
+
+             $sel.returnText.hover(function(){
+              $this = $(this);
+            //mouseover
+            $this.attr('class', 'return_over');
+          },
+          function(){
+          //mouse out
+          $this.attr('class', 'return');
+          }); 
+        });
+        </script>
+    </head>
+    <body>
+     <div id="wrapper">
+
+    <div id="stages" class="spaceBottom">
+      <img src="media/image.png" />
+      <ul>
+       
+        <li><img src="media/shock_off.png" class="diffStages" number="1" /></li>
+        <li><img src="media/denial_off.png" class="diffStages" number="2" /></li>
+        <li><img src="media/anger_off.png" class="diffStages" number="3" /></li>
+        <li><img src="media/depression_off.png" class="diffStages" number="4" /></li>
+        <li><img src="media/acceptance_off.png" class="diffStages" number="5" /></li>
+      <ul>
+   </div>
+  <div id="textTop" class="replaceText spaceBottom">
+    These different emotions or &quot;stages.&quot; are psychological defense mechanisms used in an attempt to cope with the loss and not be overwhelmed. The length and timing of the emotions will vary with the individual. What becomes difficult is when different family members grieve at different paces and in different ways.
+  </div>
+
+  <div class="replaceText">
+    Honest communication about feelings and needs is vital to prevent miscommunication and misunderstanding between family members
+  </div>
+
+  <div id = "1" class="hidden">
+    <div class="stagesBkrd">
+      <div class="fitText"> 
+    <div class="sectionTitle">Shock</div>
+        Shock may be the first emotional response with the news of a loss. The individual may experience emotional numbness over the loss, while intellectually grasping the reality of the loss. The individual may be unable to cope with activities of daily living or may ask the same questions over and over.
+    </div>
+  </div>
+      <div class="return"></div>
+  </div>
+
+    <div id = "2" class="hidden">
+      <div style="float:left">
+    </div>
+      <div class="stagesBkrd">
+         <div class="fitText">
+    <div class="sectionTitle">Denial </div>
+        Feelings of denial may be exhibited by a refusal to accept reality, panic and/or intense anxiety. These feelings and behaviors delay taking in the full reality of the loss until the psyche is better able to cope.  
+    </div>
+  </div>
+      <div class="return"></div>
+  </div>
+
+    <div id = "3" class="hidden">
+      <div class="stagesBkrd">
+         <div class="fitText">
+    <div class="sectionTitle">Anger </div>
+        Anger may be expressed as the individual becomes more fully aware of the loss suffered. Fathers express anger more often than mothers. This anger may be directed toward many people, including health care providers, family, God and the child. In the short term, it is better if the father gets angry with a professional than a family member. Fathers also express frustration. Men like to fix problems and they cannot fix this problem. Mothers, however, may direct their anger inward as guilt or shame. They will wonder what they did wrong. It is important for health care providers to give family members accurate information about death so needless guilt can be addressed appropriately.
+    </div>
+  </div>
+      <div class="return"></div>
+  </div>
+
+    <div id = "4" class="hidden">
+      <div class="stagesBkrd">
+         <div class="fitText">
+    <div class="sectionTitle">Depression </div>
+        Depression is an indication that an individual is beginning to truly accept the reality of the loss and to mourn. He or she may feel sad, helpless and/or worthless. He or she may withdraw from family, friends and/or health care providers. Fathers may prefer to be alone with their tears. Mothers may want to hug and share sadness.
+    </div>
+  </div>
+      <div class="return">
+        
+      </div>
+  
+  </div>
+
+    <div id = "5" class="hidden ">
+      <div class="stagesBkrd">
+        <div class="fitText">
+    <div class="sectionTitle">Acceptance</div>
+        Acceptance of the loss is exhibited by adaptation and reorganization of the individual's life even as the grief continues. He or she is able to find some meaning in the loss.
+      </div>
+      </div>
+
+      <div class="return"></div>
+  </div>
+
+  <!--end of wrapper-->
+     </div> 
+    </body>
+</html>

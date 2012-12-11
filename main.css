@@ -1,0 +1,62 @@
+body {
+font-family:Arial, Helvetica, sans-serif;
+font-size: 13px;
+}
+
+#wrapper {
+width: 550px; 
+height: 430px;
+overflow: hidden;
+}
+
+.hidden {display: none;}
+.instructions {font-style: italic;}
+.sectionTitle {font-weight: bold;}
+.spaceBottom {margin-bottom:5px;}
+
+ul, li {
+	list-style-type: none;
+	padding-left: 0px;
+	margin: 0px 0px 0px 2px;
+}
+
+#stages {
+	float: left;
+}
+
+.replaceText {padding-top: 15px;}
+
+#textTop {
+	padding: 0px;
+}
+
+.return {
+	float: right;
+	cursor: pointer;
+	background-image: url('back.png');
+	width: 93px;
+	height: 28px;
+
+}
+
+.return_over {
+	float: right;
+	cursor: pointer;
+	background-image: url('back-over.png');
+	width: 93px;
+	height: 28px;
+
+}
+
+.stagesBkrd {
+	background-image: url('bkrd2.png');
+	width: 434px;
+	height: 265px;
+	float: left;
+}
+
+.fitText {
+	width: 400px;
+	padding: 5px 0px 0px 15px;
+}
+
